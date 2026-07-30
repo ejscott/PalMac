@@ -1,0 +1,23 @@
+.DS_Store
+/.build/
+/outputs/
+/work/
+/*.xcresult
+*.swp
+*.tmp
+*.partial
+
+# Local signing and release material
+*.cer
+*.p12
+*.provisionprofile
+*.dmg
+*.zip
+
+# Never commit game or converted mod content
+*.pak
+*.ucas
+*.utoc
+*.uasset
+*.uexp
+*.ubulk

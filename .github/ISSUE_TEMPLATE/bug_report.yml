@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a reproducible PalMac problem
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not report security vulnerabilities here. Use private vulnerability reporting.
+  - type: input
+    id: palmac
+    attributes:
+      label: PalMac version or commit
+    validations:
+      required: true
+  - type: input
+    id: palworld
+    attributes:
+      label: Palworld version and revision
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: Mac model and macOS version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Do not attach copyrighted game or mod archives.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and error text
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Palworld was closed while changing mods.
+          required: true
+        - label: I tested with unrelated mods disabled.
+          required: true
+        - label: This report contains no private data or copyrighted assets.
+          required: true
