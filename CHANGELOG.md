@@ -4,6 +4,14 @@ All notable changes to PalMac will be documented here.
 
 ## [Unreleased]
 
+### Added
+
+- Redistributable UE 5.1.1 checker-texture starter project.
+- Repeatable Mac cook, legacy PAK, IoStore conversion, verification, package,
+  archive, and checksum workflow.
+- End-to-end texture authoring and troubleshooting guide.
+- Mod-type compatibility matrix for Windows-to-Mac conversion planning.
+
 ### Planned
 
 - Developer ID signing and notarization.

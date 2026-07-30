@@ -4,6 +4,24 @@ This guide documents the current experimental workflow. It does not include
 game assets, proprietary tools, or permission to redistribute another
 creator's work.
 
+For a working project rather than a conceptual overview, start with the
+[Checker Texture starter](../Examples/CheckerTexture/README.md) and follow the
+[texture walkthrough](TEXTURE_STARTER.md).
+
+## Compatibility classes
+
+Classify a mod before attempting a conversion:
+
+| Class | Typical content | Mac approach |
+| --- | --- | --- |
+| Direct candidate | Data assets and some meshes without custom shaders | Convert the container to UE5.1 IoStore, then test |
+| Recook required | Textures, materials, meshes with platform data | Recreate or import the author-owned source in UE 5.1.1 and cook for Mac |
+| Native rewrite required | UE4SS, Lua, Windows DLLs, executable patches | Requires a future Mac-native loader or a new implementation |
+| Unknown | Blueprints, complex dependencies, undocumented custom versions | Inspect dependencies and test in isolation; do not promise compatibility |
+
+Container conversion does not convert DirectX shaders into Metal shaders and
+does not make Windows DLLs portable.
+
 ## Start with a small content-only mod
 
 Good first tests:
@@ -78,6 +96,9 @@ Retoc is a separate project with its own license and is not bundled with
 PalMac. Conversion changes the container, not the cooked platform data.
 Windows shaders and platform-specific textures still need a Mac-native
 solution.
+
+Use the official Retoc release for your Mac and verify its published checksum.
+PalMac does not download or execute third-party modding tools.
 
 ## Package for PalMac
 

@@ -150,8 +150,10 @@ Palworld Mac build. Windows containers are not automatically Mac-compatible:
   outside PalMac's current scope.
 
 Start with [Mod Authoring](docs/MOD_AUTHORING.md) and
-[Package Format](docs/PACKAGE_FORMAT.md). Do not commit or redistribute
-copyrighted game assets.
+[Package Format](docs/PACKAGE_FORMAT.md). The
+[Checker Texture starter project](Examples/CheckerTexture/README.md) provides
+a complete, reproducible UE 5.1.1 Mac cook and IoStore packaging example. Do
+not commit or redistribute copyrighted game assets.
 
 ## Security model
 
@@ -191,6 +193,8 @@ an Apple Silicon macOS runner.
 - Explicit game-version compatibility profiles.
 - Reproducible release archives and published checksums.
 - A documented Mac cooking/conversion toolkit for mod authors.
+- Texture, material, mesh, and script compatibility guides based on
+  reproducible test projects.
 
 ## Contributing
 

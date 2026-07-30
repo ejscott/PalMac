@@ -24,3 +24,11 @@ jobs:
         run: swift test
       - name: Build release binaries
         run: swift build -c release
+      - name: Check starter project sources
+        run: |
+          zsh -n Examples/CheckerTexture/Pal/Scripts/build-mac-mod.zsh
+          python3 -c 'import ast, pathlib; ast.parse(pathlib.Path("Examples/CheckerTexture/Pal/Scripts/create_checker_textures.py").read_text())'
+          python3 -m json.tool Examples/CheckerTexture/Pal/Pal.uproject >/dev/null
+          python3 -m json.tool Examples/CheckerTexture/Pal/PackageTemplate/Info.json >/dev/null
+          xcrun swift Examples/CheckerTexture/Pal/Tools/generate_texture.swift /tmp/PalMac_Checker.png
+          cmp Examples/CheckerTexture/SourceArt/PalMac_Checker.png /tmp/PalMac_Checker.png

@@ -21,3 +21,11 @@
 *.uasset
 *.uexp
 *.ubulk
+
+# Generated Unreal starter-project data
+/Examples/*/Build/
+/Examples/*/Pal/Build/
+/Examples/*/Pal/Content/
+/Examples/*/Pal/DerivedDataCache/
+/Examples/*/Pal/Intermediate/
+/Examples/*/Pal/Saved/

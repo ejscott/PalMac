@@ -1,0 +1,11 @@
+{
+  "ModName": "PalMac Checker Texture",
+  "PackageName": "PalMacCheckerTexture",
+  "Version": "1.0.0",
+  "MinRevision": 100933,
+  "Author": "PalMac contributors",
+  "Description": "An original macOS-cooked checker texture for the female cloth/starter outfit.",
+  "InstallRule": [
+    { "Type": "Paks", "Targets": ["./Paks"] }
+  ]
+}
