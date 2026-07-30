@@ -229,3 +229,11 @@ PalMac is an independent community project. It is not affiliated with,
 endorsed by, or supported by Pocketpair, Epic Games, Apple, Nexus Mods, or the
 Palworld development team. Palworld and related names and assets belong to
 their respective owners. No game assets are included in this repository.
+
+## Support the Project
+
+I’m Evan, a developer, builder, and lifelong problem-solver. I create tools like PalMod because I enjoy turning ideas into useful, accessible projects that others can benefit from.
+
+If PalMod has been helpful and you’d like to support continued development, testing, and future improvements, you can buy me a coffee:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20PalMod-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=000000)](https://buymeacoffee.com/ejscott)
