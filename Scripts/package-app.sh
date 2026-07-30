@@ -23,6 +23,8 @@ mkdir -p "$app_path/Contents/MacOS" "$app_path/Contents/Resources"
 cp "$project_root/.build/release/PalMacApp" "$app_path/Contents/MacOS/PalMac"
 cp "$project_root/.build/release/palmac" "$app_path/Contents/MacOS/PalMacHelper"
 cp "$project_root/Packaging/Info.plist" "$app_path/Contents/Info.plist"
+cp "$project_root/Packaging/PalMacIcon.icns" \
+   "$app_path/Contents/Resources/PalMacIcon.icns"
 chmod 755 "$app_path/Contents/MacOS/PalMac" "$app_path/Contents/MacOS/PalMacHelper"
 /usr/bin/xattr -cr "$app_path"
 /usr/bin/codesign --force --deep --sign - "$app_path"
