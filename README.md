@@ -43,6 +43,18 @@ standard package scanner.
 PalMac deliberately does **not** support UE4SS, Lua, LogicMods, PalSchema,
 Windows DLLs, or arbitrary installer scripts.
 
+## Mod authoring
+
+- [Mod authoring overview](docs/MOD_AUTHORING.md)
+- [Mac texture walkthrough](docs/TEXTURE_STARTER.md)
+- [Hybrid model and content conversion workflow](docs/CONTENT_CONVERSION.md)
+- [Checker texture starter project](Examples/CheckerTexture/README.md)
+
+The conversion workflow can retain compatible cooked mesh data while replacing
+platform-specific textures and materials with Mac-cooked overlays. It does not
+automatically make Windows shaders, scripts, DLLs, or arbitrary Blueprints
+portable.
+
 ## Tested configuration
 
 The current proof of concept was tested with:
