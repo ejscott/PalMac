@@ -8,6 +8,10 @@ For a working project rather than a conceptual overview, start with the
 [Checker Texture starter](../Examples/CheckerTexture/README.md) and follow the
 [texture walkthrough](TEXTURE_STARTER.md).
 
+For a model conversion that combines compatible legacy mesh data with
+Mac-cooked texture or material replacements, use the
+[content conversion workflow](CONTENT_CONVERSION.md).
+
 ## Compatibility classes
 
 Classify a mod before attempting a conversion:
@@ -96,6 +100,22 @@ Retoc is a separate project with its own license and is not bundled with
 PalMac. Conversion changes the container, not the cooked platform data.
 Windows shaders and platform-specific textures still need a Mac-native
 solution.
+
+PalMac includes a guarded builder for a prepared legacy asset tree:
+
+```sh
+zsh Scripts/build-content-conversion.zsh \
+  --source-root /path/to/LegacySource \
+  --overlay-root /path/to/MacCookedOverlay \
+  --package-name ExampleModelMac \
+  --mod-name "Example Model Replacement (Mac)" \
+  --output-root /path/to/Build \
+  --plan-only
+```
+
+The tool deliberately does not extract untrusted archives. It validates the
+prepared inputs, reports which files will be replaced by Mac-cooked overlays,
+and can then build and verify the final IoStore triplet.
 
 Use the official Retoc release for your Mac and verify its published checksum.
 PalMac does not download or execute third-party modding tools.
